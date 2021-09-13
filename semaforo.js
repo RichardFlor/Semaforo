@@ -15,14 +15,14 @@ function ligar(arquivo){
     return document.querySelector("img").src = "img/" + arquivo + ".png" 
 }
 
-function paraLoop(){
+function pararLoop(){
     if(tracker != null){
         clearInterval(tracker)
         tracker = null
     }
 }
 function escolhido(evento, arquivo){
-    paraLoop()
+    pararLoop()
     ligar(arquivo)
 }
 function loop(){
@@ -45,7 +45,7 @@ function loop(){
         }, 1000)
     }
     else
-        paraLoop()
+        pararLoop()
 }
 document.getElementById("vermelho").addEventListener("click", (event, ) => escolhido(event, "vermelho"))
 document.getElementById("amarelo").addEventListener("click", (event, ) => escolhido(event, "amarelo"))
